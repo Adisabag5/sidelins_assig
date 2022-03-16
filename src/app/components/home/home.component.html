@@ -1,0 +1,28 @@
+<div class="container">
+
+    <div class="header">
+
+        <div class="sign">
+            <a routerLink="/login"> Login</a>
+            <a routerLink="/register"> Register</a>
+        </div>
+        <div class="logout" *ngIf="loggedUser">
+            <button (click)="logout()">Logout</button>
+        </div>
+
+    </div>
+
+    <div class="body">
+
+        <div class="article-list">
+            <!-- ngFor on list-item       -->
+            <app-article *ngFor="let article of articles" [articleData]="article" [isLogged]="(loggedUser? true : false)">
+                
+            </app-article>
+            
+
+        </div>
+
+    </div>
+
+</div>

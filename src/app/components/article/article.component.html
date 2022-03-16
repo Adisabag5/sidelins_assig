@@ -1,0 +1,6 @@
+<div class="container">
+    <h1>{{ articleData?.title }}</h1>
+    <p>{{ articleData?.username }}</p>
+    <p>{{ articleData?.date }}</p>
+    <button *ngIf="isLogged" (click)="deleteArticle(articleData.id)">Delete</button>
+</div>
